@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Dennis Anyende Makaka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap">
+    <style>
+        /* Internal styling for skills.html */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/tech-emboss.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        header {
+            background-color: rgba(30, 42, 56, 0.9);
+            padding: 20px;
+            border-bottom: 2px solid rgba(27, 38, 51, 0.9);
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4a90e2;
+        }
+
+        .skills-container {
+            padding: 100px 20px; /* Adjusted to account for the fixed header */
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .skills-content {
+            background-color: rgba(44, 56, 70, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #50c878;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 15px;
+        }
+
+        .skills-section {
+            margin-bottom: 40px;
+        }
+
+        .skills-section p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #d0d0d0;
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            font-size: 18px;
+            font-weight: 400;
+            color: #d0d0d0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px 20px;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .skills-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .skills-list li i {
+            margin-right: 15px;
+            color: #4a90e2;
+            font-size: 24px;
+        }
+
+        footer {
+            background-color: rgba(30, 42, 56, 0.9);
+            text-align: center;
+            padding: 10px;
+            color: #f0f0f0;
+            border-top: 2px solid rgba(27, 38, 51, 0.9);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .skills-container {
+                padding: 80px 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .skills-list li {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="skills-container">
+        <div class="skills-content">
+            <h1>My Skills</h1>
+
+            <div class="skills-section">
+                <h2>Technical Skills</h2>
+                <p>Proficient in various technologies and programming languages, I continuously strive to enhance my technical skill set.</p>
+                <ul class="skills-list">
+                    <li><i class="fas fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li><i class="fab fa-js-square"></i> JavaScript</li>
+                    <li><i class="fab fa-react"></i> React.js</li>
+                    <li><i class="fab fa-node"></i> Node.js</li>
+                    <li><i class="fas fa-database"></i> SQL</li>
+                    <li><i class="fas fa-database"></i> MongoDB</li>
+                    <li><i class="fas fa-server"></i> REST APIs</li>
+                    <li><i class="fas fa-cogs"></i> GraphQL</li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h2>Tools & Technologies</h2>
+                <p>Experienced in using various development tools to streamline workflows and improve productivity.</p>
+                <ul class="skills-list">
+                    <li><i class="fab fa-github"></i> Git, GitHub</li>
+                    <li><i class="fab fa-docker"></i> Docker</li>
+                    <li><i class="fab fa-kubernetes"></i> Kubernetes</li>
+                    <li><i class="fas fa-tools"></i> Webpack</li>
+                    <li><i class="fas fa-tools"></i> Babel</li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h2>Soft Skills</h2>
+                <p>In addition to technical skills, I possess key soft skills essential for effective collaboration and problem-solving.</p>
+                <ul class="skills-list">
+                    <li><i class="fas fa-users"></i> Team Collaboration</li>
+                    <li><i class="fas fa-comments"></i> Communication</li>
+                    <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
+                    <li><i class="fas fa-clock"></i> Time Management</li>
+                    <li><i class="fas fa-tachometer-alt"></i> Adaptability</li>
+                    <li><i class="fas fa-handshake"></i> Negotiation</li>
+                    <li><i class="fas fa-check-circle"></i> Attention to Detail</li>
+                    <li><i class="fas fa-balance-scale"></i> Critical Thinking</li>
+                    <li><i class="fas fa-user-cog"></i> Leadership</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Dennis Anyende Makaka. All rights reserved.</p>
+    </footer>
+</body>
+</html>

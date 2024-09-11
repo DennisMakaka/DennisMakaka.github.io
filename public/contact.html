@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dennis Anyende Makaka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Internal styling for contact.html */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://cdn.pixabay.com/photo/2016/11/29/05/08/architecture-1867232_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Adjust opacity for faintness */
+            z-index: -1;
+        }
+
+        header {
+            background-color: rgba(30, 42, 56, 0.9);
+            padding: 20px;
+            border-bottom: 2px solid rgba(27, 38, 51, 0.9);
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4a90e2;
+        }
+
+        .contact-container {
+            padding: 100px 20px; /* Adjusted to account for the fixed header */
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .contact-content {
+            background-color: rgba(44, 56, 70, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 60px;
+        }
+
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: #50c878;
+            margin-bottom: 20px;
+        }
+
+        p, a {
+            font-size: 18px;
+            font-weight: 400;
+            color: #d0d0d0;
+            margin-bottom: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        p i, a i {
+            margin-right: 10px;
+        }
+
+        a:hover {
+            color: #4a90e2;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #f0f0f0;
+            font-size: 32px;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #50c878;
+        }
+
+        footer {
+            background-color: rgba(30, 42, 56, 0.9);
+            text-align: center;
+            padding: 10px;
+            color: #f0f0f0;
+            border-top: 2px solid rgba(27, 38, 51, 0.9);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 100px 10px; /* Adjusted padding for smaller screens */
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p, a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+        <div class="contact-content">
+            <h1>Contact Me</h1>
+            <p><i class="fas fa-map-marker-alt"></i>Location: Nairobi, Kenya</p>
+            <p><i class="fas fa-phone-alt"></i>Phone: <a href="tel:+254799066347">+254799066347</a></p>
+            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:makakait123@gmail.com">makakait123@gmail.com</a></p>
+            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:dennismakaka@outlook.com">dennismakaka@outlook.com</a></p>
+            <div class="social-links">
+                <a href="https://github.com/DennisMakaka" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dennis-anyende-makaka" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/dennis_makaka" target="_blank" rel="noopener noreferrer" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/dennis.makaka" target="_blank" rel="noopener noreferrer" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/dennis.makaka" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Dennis Anyende Makaka. All rights reserved.</p>
+    </footer>
+</body>
+</html>
