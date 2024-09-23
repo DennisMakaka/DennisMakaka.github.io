@@ -4,34 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartSpend</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f4f4f4; /* Light gray background */
+            background-color: #f7f8fa; /* Light neutral background */
+            color: #333; /* Darker text for readability */
         }
+        a {
+            color: #007bff; /* Modern blue for links */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        h1, h2, h3 {
+            color: #333; /* Darker headings */
+        }
+
+        /* Header Styles */
         header {
             position: relative;
             text-align: center;
+            background: linear-gradient(45deg, #007bff, #6610f2); /* Smooth gradient for header */
             color: white;
-            background-color: #333; /* Darker header for contrast */
+            padding: 60px 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Modern shadow for depth */
         }
         .cover-image {
             width: 100%;
             height: auto;
             max-height: 400px;
             object-fit: cover;
+            border-radius: 10px;
         }
-        .intro {
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.6);
+        .intro h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
         }
+        .intro p {
+            font-size: 1.2em;
+        }
+
+        /* Navigation */
         nav ul {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
         }
         nav ul li {
             display: inline;
@@ -39,42 +61,116 @@
         }
         nav a {
             color: white;
-            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 25px;
+            transition: background 0.3s ease;
         }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Button */
         .btn {
-            background: #ff9800;
+            background: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 25px;
             border: none;
-            border-radius: 5px;
-            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            cursor: pointer;
             transition: background 0.3s;
         }
         .btn:hover {
-            background: #e68a00;
+            background: #218838;
         }
+
+        /* Features Section */
         .features {
             display: flex;
             justify-content: space-around;
-            padding: 50px 0;
-            background-color: #fff; /* White background for features section */
+            padding: 60px 0;
+            background-color: #f0f4ff; /* Light pastel blue for modern feel */
+            text-align: center;
         }
         .feature {
-            text-align: center;
             width: 30%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff; /* Clean white for card contrast */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
         }
         .feature img {
             width: 100%;
-            max-width: 150px; /* Adjust based on your images */
+            max-width: 150px;
+            margin-bottom: 20px;
         }
+        .feature h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            color: #007bff;
+        }
+        .feature p {
+            color: #555; /* Subtle gray for description */
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background-color: #e9ecef; /* Very light gray for a modern neutral contrast */
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #6610f2;
+        }
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.2em;
+            color: #007bff; /* Maintain modern blue theme */
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 60px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .video-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .video-section video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
         footer {
-            background: #222;
+            background: #343a40;
             color: white;
             text-align: center;
             padding: 20px;
             position: relative;
             bottom: 0;
             width: 100%;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -88,31 +184,62 @@
             <p>Effortlessly manage your budget and track your spending.</p>
             <nav>
                 <ul>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </nav>
+            <br>
             <a href="https://your-deployed-url.com" class="btn">Get Started</a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="features">
+    <section id="features" class="features">
         <div class="feature">
-            <img src="expense-tracking.jpg" alt="Expense Tracking">
+            <img src="images/Expense Tracking.png" alt="Expense Tracking">
             <h3>Expense Tracking</h3>
             <p>Keep track of your daily expenses and understand your spending patterns.</p>
         </div>
         <div class="feature">
-            <img src="images\Schedule payments.png" alt="Scheduling Payments">
+            <img src="images/Schedule payments.png" alt="Scheduling Payments">
             <h3>Scheduling Payments</h3>
             <p>Set up reminders for upcoming payments to avoid late fees.</p>
         </div>
         <div class="feature">
-            <img src="images\Print.png" alt="Printing Reports">
+            <img src="images/Print.png" alt="Printing Reports">
             <h3>Printing Reports</h3>
             <p>Generate and print detailed reports to visualize your financial health.</p>
         </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About SmartSpend</h2>
+        <p>
+            SmartSpend was inspired by my personal experience of struggling with financial management. 
+            I needed an easy and reliable way to track my spending, schedule payments, and generate detailed reports to see where my money was going.
+            This project was developed over the course of a few months as part of my journey to create helpful financial tools for personal and professional use. 
+            As a Portfolio Project for Holberton School, SmartSpend is a testament to my growth as a developer.
+        </p>
+        <p>
+            Explore the project repository on GitHub, and feel free to connect with me on social media:
+        </p>
+        <div class="social-links">
+            <a href="www.linkedin.com/in/dennis-makaka-419838261" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/DennisMakaka" target="_blank">GitHub</a> |
+            <a href="https://x.com/premium_078?t=6pjl84Wf4uBEdvwVzcByYg&s=09" target="_blank">Twitter</a>
+        </div>
+        <br>
+        <a href="https://github.com/your-repository-url" target="_blank">View the GitHub Repository</a>
+    </section>
+
+    <!-- Optional Video Section -->
+    <section class="video-section">
+        <h2>Project Introduction Video</h2>
+        <video controls>
+            <source src="videos\Smartspend Demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
 
     <!-- Footer -->
@@ -120,6 +247,5 @@
         <p>&copy; 2024 SmartSpend. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script> <!-- Link to your JS file -->
 </body>
-</html
+</html>
