@@ -35,16 +35,31 @@ const nav = $('#primary-nav');
 menuToggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); });
 nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { nav.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); }));
 
-$('#join-form').addEventListener('submit', (event) => {
+$('#join-form').addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   const status = form.querySelector('.form-status');
+  const button = form.querySelector('button[type="submit"]');
   const age = Number(form.age.value);
   if (!form.checkValidity()) { status.textContent = 'Please complete the required fields before sending your enquiry.'; status.style.color = '#b33d1d'; form.reportValidity(); return; }
   if (age < 18 && !form.guardian.value.trim()) { status.textContent = 'Please provide a parent or guardian contact for applicants under 18.'; status.style.color = '#b33d1d'; form.guardian.focus(); return; }
-  status.textContent = 'Thank you. Your enquiry has been prepared securely for the academy team. Connect this form to your preferred email or backend endpoint before launch.';
-  status.style.color = '#2c6e49';
-  form.reset();
+  button.disabled = true;
+  button.querySelector('span').textContent = '…';
+  status.textContent = 'Sending your enquiry…';
+  status.style.color = '';
+  try {
+    const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+    if (!response.ok) throw new Error('Form submission failed');
+    status.textContent = 'Thank you. Your enquiry has been sent to the academy team.';
+    status.style.color = '#2c6e49';
+    form.reset();
+  } catch (error) {
+    status.textContent = 'We could not send your enquiry. Please try again or contact the academy directly.';
+    status.style.color = '#b33d1d';
+  } finally {
+    button.disabled = false;
+    button.querySelector('span').textContent = '↗';
+  }
 });
 
 render();
