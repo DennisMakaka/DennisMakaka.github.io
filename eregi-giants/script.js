@@ -1,16 +1,16 @@
 const academyConfig = {
   programs: [
-    { icon: '01', title: 'Training & talent', text: 'Structured basketball sessions that help young players build skills, confidence and a love for the game.' },
-    { icon: '02', title: 'Mentorship', text: 'Supportive guidance that connects sport with personal development, education and purpose.' },
-    { icon: '03', title: 'Leadership', text: 'Practical opportunities to build discipline, responsibility and the courage to lead.' },
-    { icon: '04', title: 'Competition', text: 'Friendly matches and competitive experiences that turn preparation into learning.' },
-    { icon: '05', title: 'Community', text: 'Outreach and connection that use basketball as a bridge to positive change.' }
+    { icon: '01', title: 'Basketball & talent', text: 'Structured basketball training that identifies talent and builds skilled, confident young athletes.' },
+    { icon: '02', title: 'Education support', text: 'Academic support, scholarships and tutoring that help young people stay connected to education.' },
+    { icon: '03', title: 'Christian values', text: 'Spiritual mentorship that nurtures love, responsibility, discipline and purpose.' },
+    { icon: '04', title: 'Leadership', text: 'Teamwork and leadership development that prepare young people to contribute positively.' },
+    { icon: '05', title: 'Social inclusion', text: 'Community outreach that includes children with disabilities and from marginalized backgrounds.' }
   ],
   stats: [
-    { value: '—', label: 'Verified milestone data coming soon' },
-    { value: '—', label: 'Verified athlete stories coming soon' },
-    { value: '—', label: 'Verified partnerships coming soon' },
-    { value: '—', label: 'Verified community updates coming soon' }
+    { value: '100+', label: 'Young athletes trained and mentored' },
+    { value: '2018', label: 'Academy founded' },
+    { value: '01', label: 'Education Through Hoops program' },
+    { value: '∞', label: 'Purpose through sport' }
   ],
   gallery: [
     { title: 'Training sessions', image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80' },
