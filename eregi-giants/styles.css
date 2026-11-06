@@ -29,3 +29,5 @@
 .contact-card{background:#0d2b52}
 .site-footer{background:#041126}
 .contact-actions{display:flex;flex-wrap:wrap;gap:10px}.button-whatsapp{background:#1fbd63;color:#fff}.button-whatsapp:hover{background:#159c50}
+.partnership-block{display:grid;grid-template-columns:1fr 1fr;gap:80px;border-top:1px solid rgba(255,255,255,.25);margin-top:90px;padding-top:55px}.partnership-block h3{font:800 clamp(3.2rem,6vw,5.5rem)/.86 var(--display);text-transform:uppercase;margin:0}.partnership-block h3 em{font-style:normal;color:#ffb08e}.partnership-copy>p{max-width:430px;color:rgba(255,255,255,.82);font-size:1.05rem}.partner-benefits{display:grid;gap:12px;margin:28px 0}.partner-benefits span{display:block;border-left:2px solid var(--orange);padding-left:14px;color:rgba(255,255,255,.7);font-size:.82rem}
+@media (max-width:800px){.partnership-block{grid-template-columns:1fr;gap:25px;margin-top:55px;padding-top:35px}}
